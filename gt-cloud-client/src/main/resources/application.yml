@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: todoapp
+  profiles:
+    active: prod
+  config:
+    import: "optional:configserver:"
+  cloud:
+    config:
+      uri: http://localhost:8888/config
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
