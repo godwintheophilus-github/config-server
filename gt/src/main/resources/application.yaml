@@ -1,0 +1,25 @@
+#spring.application.name=gt
+#server.port=8888
+#spring.servlet.context-path=/config
+#spring.cloud.config.server.git.uri=https://github.com/godwintheophilus-github/config-repo.git
+#management.endpoints.web.exposure.include=*
+#spring.cloud.config.server.git.searchPaths={application}
+#spring.cloud.config.name=${spring.application.name}
+#spring.cloud.config.server.git.basedir=config-repo
+#spring.cloud.config.server.git.cloneOnStart=true
+
+server:
+  port: 8888
+  servlet:
+    context-path: /config
+
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/godwintheophilus-github/config-repo.git
+          search-paths: '{application}'
